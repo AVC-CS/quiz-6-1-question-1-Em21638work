@@ -3,7 +3,7 @@ using namespace std;
 
 void getTwoValues(int &begin, int &end);
 int getNextPrime(int begin);
-int getPervPrime(int end);
+int getPrevPrime(int end);
 
 void getTwoValues(int &begin, int &end) {
     cout << "Give two numbers " << endl;
@@ -36,11 +36,11 @@ int getNextPrime(int begin) {
     return prime;
 }
 
-int getPervPrime(int end) {
+int getPrevPrime(int end) {
     int prime;
     for (int i = end--; i < 0; i--) {
         prime = 0;
-        for (int j = 2, j < 100; j++) {
+        for (int j = 2; j < 100; j++) {
             if (i == j) {
                 j++;
             }
