@@ -29,9 +29,11 @@ int getNextPrime(int begin) {
         }
         if (prime == 0) {
             cout <<" The next prime number is " << i << endl;
+            prime = i;
             i = -2;
         }
     }
+    return prime;
 }
 
 int getPervPrime(int end) {
@@ -48,8 +50,10 @@ int getPervPrime(int end) {
         }
         if (prime == 0) {
             cout << " The pervious prime number is " << i << endl;
+            prime = i;
             i = -2; 
         }
     }
+    return prime;
 }
 
